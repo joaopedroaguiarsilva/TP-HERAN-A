@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Michael Kölling and David J. Barnes
  * @version 0.2
  */
-public class MessagePost extends Post
+public class MessagePost extends CommentedPost
 {
     private String message;  // an arbitrarily long, multi-line message
 
@@ -34,8 +34,33 @@ public class MessagePost extends Post
         return message;
     }
     
-    public void ShortSummary()
+    public void printShortSummary()
     {
-        System.out.println("Message post from ", super.getUserName());
+        System.out.println("Message post from " + super.getUserName());
+    }
+    
+    @Override
+    public void display()
+    {
+        super.display();
+        
+        System.out.println(message);
+        
+        if(likes > 0) {
+            System.out.println("  -  " + likes + " people like this.");
+        }
+        else {
+            System.out.println();
+        }
+        
+        if(comments.isEmpty()) {
+            System.out.println("   No comments.");
+        }
+        else {
+            System.out.println("   " + comments.size() + " comment(s). Click here to view.");
+        }
+        
+        System.out.println(" ");
+        System.out.println(" ");
     }
 }
