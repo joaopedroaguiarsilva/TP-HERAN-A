@@ -17,17 +17,15 @@ public class Quadrado extends Formas
      */
     public Quadrado()
     {
+        super(310,120,"vermelho",false);
         tamanho = 60;
-        posiçãoX = 310;
-        posiçãoY = 120;
-        cor = "vermelho";
-        estáVisível = false;
     }
 
     /**
      * Desenha um quadrado com as especificações atuais na tela.
      */
-    private void desenhar()
+    @Override
+    public void desenhar()
     {
         if(estáVisível) {
             Canvas canvas = Canvas.getCanvas();

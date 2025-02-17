@@ -17,18 +17,16 @@ public class Triangulo extends Formas
      */
     public Triangulo()
     {
+        super(210,140,"green",false);
         altura = 60;
         base = 70;
-        posiçãoX = 210;
-        posiçãoY = 140;
-        cor = "green";
-        estáVisível = false;
     }
 
     /**
      * Draw the triangle with current specifications on screen.
      */
-    private void desenhar()
+    @Override
+    public void desenhar()
     {
         if(estáVisível) {
             Canvas canvas = Canvas.getCanvas();

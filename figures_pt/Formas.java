@@ -7,10 +7,10 @@
  */
 public abstract class Formas
 {
-    private int posiçãoX;
-    private int posiçãoY;
-    private String cor;
-    private boolean estáVisível;
+    protected int posiçãoX;
+    protected int posiçãoY;
+    protected String cor;
+    protected boolean estáVisível;
     
     /**
      * Construtor para objetos da classe Formas
@@ -142,13 +142,6 @@ public abstract class Formas
     }
 
     /**
-     * Muda o tamanho para o novo valor (em pixels). Tamanho precise ser >= 0.
-     */
-    public abstract void mudarTamanho();    
-    
-    public abstract void desenhar();
-
-    /**
      * Muda a cor. Cores válidas são "vermelho", "amarelo", "azul", "verde",
      * "magenta" e "preto".
      */
@@ -158,10 +151,12 @@ public abstract class Formas
         desenhar();
     }
     
+    public abstract void desenhar();
+    
       /**
      * Apaga o quadrado da tela.
      */
-    private void apagar()
+    protected void apagar()
     {
         if(estáVisível) {
             Canvas canvas = Canvas.getCanvas();
