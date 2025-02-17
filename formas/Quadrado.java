@@ -10,7 +10,8 @@ public class Quadrado extends Retangulo
     /**
      * Construtor para objetos da classe Quadrado
      */
-    public Quadrado(int lado)
+    public Quadrado(double lado)
     {
        super(lado,lado);      
-    }}
+    }
+}

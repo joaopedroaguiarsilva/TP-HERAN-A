@@ -5,36 +5,39 @@
  * @author (seu nome) 
  * @version (um número da versão ou uma data)
  */
-public class Retangulo
+public class Retangulo extends Forma
 {
-    protected int base;
-    protected int altura;
+    protected double base;
+    protected double altura;
 
     /**
      * Construtor para objetos da classe Retangulo
      */
-    public Retangulo(int base, int altura)
+    public Retangulo(double base, double altura)
     {
         this.base = base;
         this.altura = altura;
     }
 
-    public int getBase()
+    public double getBase()
     {
         return base;
     }
     
-    public int getAltura()
+    
+    public double getAltura()
     {
         return altura;
     }
     
-    public int getArea()
+    @Override
+    public double getArea()
     {
         return altura * base;
     }
     
-    public int getPerimetro()
+    @Override
+    public double getPerimetro()
     {
         return (base*2) + (altura*2);
     }

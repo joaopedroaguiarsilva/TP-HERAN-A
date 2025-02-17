@@ -5,29 +5,29 @@
  * @author (seu nome) 
  * @version (um número da versão ou uma data)
  */
-public class Circulo
+public class Circulo extends Forma
 {
-    // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
+    private double raio;
 
     /**
      * Construtor para objetos da classe Circulo
      */
-    public Circulo()
+    public Circulo(double raio)
     {
-        // inicializa variáveis de instância
-        x = 0;
+        this.raio = raio;
     }
 
-    /**
-     * Um exemplo de um método - substitua este comentário pelo seu próprio
-     * 
-     * @param  y   um exemplo de um parâmetro de método
-     * @return     a soma de x e y 
-     */
-    public int sampleMethod(int y)
+    @Override
+    public double getArea()
     {
-        // escreva seu código aqui
-        return x + y;
+        double area;
+        area= 3.14 * (Math.pow(raio,2));
+        return area;
+    }
+    
+    @Override
+    public double getPerimetro()
+    {
+        return 2*3.14 * raio;
     }
 }
