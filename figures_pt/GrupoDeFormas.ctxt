@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=GrupoDeFormas
+comment1.params=
+comment1.target=GrupoDeFormas()
+comment2.params=forma
+comment2.target=void\ adicionarForma(Formas)
+comment3.params=forma
+comment3.target=void\ removerForma(Formas)
+comment4.params=
+comment4.target=void\ desenhar()
+comment5.params=
+comment5.target=void\ apagar()
+comment6.params=distancia
+comment6.target=void\ moverHorizontal(int)
+comment7.params=distancia
+comment7.target=void\ moverVertical(int)
+numComments=8
